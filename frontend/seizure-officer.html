@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seizure Entry | NarcoTrack BD</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">NarcoTrack BD</div>
+    <nav>
+      <a href="index.php">Home</a>
+    </nav>
+  </header>
+
+  <!-- SEIZURE OFFICER FORM -->
+  <main class="login-wrapper">
+    <div class="login-card">
+      <h2>Seizure Officer Information</h2>
+      <p class="subtext">
+        Constable / Head Constable seizure entry (No login required)
+      </p>
+
+      <form id="seizureOfficerForm" method="POST" action="seizure-officer.php">
+        <label>Officer Force</label>
+        <select name="officerType" required>
+          <option value="">Select Force</option>
+          <option value="Police">Police</option>
+          <option value="RAB">RAB</option>
+          <option value="DNC">DNC</option>
+          <option value="BGB">BGB</option>
+          <option value="Customs">Customs</option>
+        </select>
+
+        <label>Admin Zone / District</label>
+        <select name="zone" id="zone" required>
+          <option value="">Select Zone</option>
+          <option value="north">Dhaka North</option>
+          <option value="south">Dhaka South</option>
+          <option value="outside">Outside Dhaka</option>
+        </select>
+
+        <label>Thana / Posting Unit</label>
+        <select name="thana" id="thana" required disabled>
+          <option value="">Select Thana</option>
+        </select>
+
+        <label>Full Name</label>
+        <input type="text" name="full_name" placeholder="Officer full name" required />
+
+        <label>Badge Number / Force ID</label>
+        <input type="text" name="badge_number" placeholder="Enter ID number" required />
+
+        <label>Mobile Number</label>
+        <input type="tel" name="mobile" placeholder="Contact number" required />
+
+        <button type="submit" class="btn primary full">Save Information</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/seizure-officer.js"></script>
+</body>
+
+</html>
