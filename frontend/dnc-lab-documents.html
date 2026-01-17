@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DNC Lab Documents | NarcoTrack BD</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">NarcoTrack BD</div>
+        <nav>
+            <a href="index.php">Home</a>
+        </nav>
+    </header>
+
+    <main class="login-wrapper">
+        <div class="login-card">
+            <h2>Upload Verification Documents</h2>
+
+            <form id="labDocsForm" method="POST" action="dnc-lab-documents.php" enctype="multipart/form-data">
+
+                <label>DNC Lab ID Card</label>
+                <input type="file" name="id_card" required>
+
+                <label>Appointment / Posting Letter</label>
+                <input type="file" name="posting_letter" required>
+
+                <button class="btn primary full" type="submit">Next</button>
+
+            </form>
+        </div>
+    </main>
+
+    <script src="js/dnc-lab-documents.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | NarcoTrack BD</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">NarcoTrack BD</div>
+    <nav>
+      <a href="index.php">Home</a>
+    </nav>
+  </header>
+
+  <!-- LOGIN -->
+  <main class="login-wrapper">
+    <div class="login-card">
+      <h2>Login to Your Account</h2>
+
+      <form id="loginForm" method="POST" action="login.php">
+
+        <label>Email / Username</label>
+        <input type="text" name="username" id="username" placeholder="Enter your official email or username" required />
+
+        <label>Password</label>
+        <div class="password-box">
+          <input type="password" name="password" id="password" placeholder="Enter your password" required />
+          <span class="eye" onclick="togglePassword()">👁</span>
+        </div>
+
+        <div class="forgot">
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn primary full">Login</button>
+
+        <p class="signup-text">
+          Don’t have an account?
+          <a href="role-select.php">Create one</a>
+        </p>
+
+        <p class="signup-text admin-link">
+          Admin? <a href="login.php?role=admin">Login here</a>
+        </p>
+
+      </form>
+    </div>
+  </main>
+
+  <script src="js/login.js"></script>
+</body>
+
+</html>

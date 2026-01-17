@@ -1,0 +1,72 @@
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['dnc_lab_details'] = [
+        'full_name'    => filter_input(INPUT_POST, 'full_name', FILTER_SANITIZE_SPECIAL_CHARS),
+        'employee_id'  => filter_input(INPUT_POST, 'employee_id', FILTER_SANITIZE_SPECIAL_CHARS),
+        'lab_name'     => filter_input(INPUT_POST, 'lab_name', FILTER_SANITIZE_SPECIAL_CHARS),
+        'posting_city' => filter_input(INPUT_POST, 'posting_city', FILTER_SANITIZE_SPECIAL_CHARS),
+        'email'        => filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL),
+        'phone'        => filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_SPECIAL_CHARS),
+    ];
+
+    header("Location: dnc-lab-documents.php");
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DNC Lab Details | NarcoTrack BD</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">NarcoTrack BD</div>
+    <nav>
+        <a href="index.php">Home</a>
+    </nav>
+</header>
+
+<main class="login-wrapper">
+  <div class="login-card">
+    <h2>DNC Lab Officer Verification</h2>
+
+    <form id="labDetailsForm" method="POST" action="">
+
+      <label>Designation</label>
+      <input type="text" value="DNC Laboratory Officer" readonly>
+
+      <label>Full Name</label>
+      <input type="text" name="full_name" required>
+
+      <label>DNC Employee ID</label>
+      <input type="text" name="employee_id" placeholder="DNC-LAB-XXXX" required>
+
+      <label>Lab Name</label>
+      <input type="text" name="lab_name" placeholder="Central DNC Laboratory" required>
+
+      <label>Posting City</label>
+      <input type="text" name="posting_city" placeholder="Dhaka" required>
+
+      <label>Official Email</label>
+      <input type="email" name="email" placeholder="name@dnc.gov.bd" required>
+
+      <label>Phone Number</label>
+      <input type="tel" name="phone" required>
+
+      <button class="btn primary full" type="submit">Next</button>
+
+    </form>
+  </div>
+</main>
+
+<script src="js/dnc-lab-details.js"></script>
+<?php
+$extraScripts = ['js/dnc-lab-details.js'];
+include 'includes/footer.php';
+?>
+
