@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auditor Details | NarcoTrack BD</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">NarcoTrack BD</div>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="login-wrapper">
+    <div class="login-card">
+
+      <h2>Auditor Verification</h2>
+
+      <form id="auditorDetailsForm" method="POST" action="auditor-details.php">
+        <label>Full Name</label>
+        <input type="text" name="full_name" required />
+
+        <label>Designation</label>
+        <select name="designation" required>
+          <option value="">Select</option>
+          <option>Auditor</option>
+          <option>Senior Auditor</option>
+          <option>Compliance Officer</option>
+        </select>
+
+        <label>Affiliated Authority</label>
+        <select name="authority" required>
+          <option value="">Select</option>
+          <option>DNC Audit Wing</option>
+          <option>Police HQ Audit</option>
+          <option>Government Oversight Body</option>
+        </select>
+
+        <label>Auditor / Employee ID</label>
+        <input type="text" name="employee_id" required />
+
+        <label>Official Email</label>
+        <input type="email" name="email" required />
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required />
+
+        <button type="submit" class="btn primary full">Next</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/auditor.js"></script>
+</body>
+
+</html>

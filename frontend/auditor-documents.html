@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Documents | NarcoTrack BD</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">NarcoTrack BD</div>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main class="login-wrapper">
+        <div class="login-card">
+            <h2>Upload Verification Documents</h2>
+
+
+            <form id="auditorDocsForm" method="POST" action="auditor-documents.php" enctype="multipart/form-data">
+                <label>Appointment / Authorization Letter</label>
+                <input type="file" name="auth_letter" required />
+
+                <label>Official ID Card</label>
+                <input type="file" name="id_card" />
+
+                <button type="submit" class="btn primary full">Next</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/auditor.js"></script>
+</body>
+
+</html>

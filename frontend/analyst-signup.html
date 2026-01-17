@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analyst Sign Up | NarcoTrack BD</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">NarcoTrack BD</div>
+        <nav>
+            <a href="index.php">Home</a>
+        </nav>
+    </header>
+
+    <main class="login-wrapper">
+        <div class="login-card">
+            <h2>Create Analyst Account</h2>
+
+            <form id="analystSignupForm" method="POST" action="analyst-signup.php">
+
+                <label>Role</label>
+                <input type="text" value="Analyst" readonly>
+
+                <label>Department</label>
+                <select name="department" required>
+                    <option value="">Select Department</option>
+                    <option value="dnc-intel">DNC Intelligence Wing</option>
+                    <option value="police-intel">Police Intelligence Branch</option>
+                    <option value="narcotics-analysis">National Narcotics Analysis Cell</option>
+                </select>
+
+                <label>Analyst ID</label>
+                <input type="text" name="analyst_code" placeholder="ANA-XXXX" required>
+
+                <label>Full Name</label>
+                <input type="text" name="full_name" placeholder="Enter full name" required>
+
+                <label>Official Email</label>
+                <input type="email" name="email" placeholder="name@gov.bd" required>
+
+                <label>Official Phone</label>
+                <input type="tel" name="phone" placeholder="01XXXXXXXXX" required>
+
+                <label>Username</label>
+                <input type="text" name="username" required>
+
+                <label>Password</label>
+                <input type="password" name="password" required>
+
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" required>
+
+                <button type="submit" class="btn primary full">Create Analyst Account</button>
+
+                <p class="signup-text">
+                    Already have an account?
+                    <a href="login.php">Login</a>
+                </p>
+
+            </form>
+        </div>
+    </main>
+
+    <script src="js/analyst-signup.js"></script>
+</body>
+
+</html>
