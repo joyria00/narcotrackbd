@@ -4,9 +4,13 @@
 
 NarcotrackBD – Database Design & Implementation
 
+
+
 Project Overview
 
 NarcotrackBD is a relational database system designed to manage and monitor narcotics-related cases in Bangladesh. The system supports multiple law enforcement and regulatory forces, ensures role-based access control, and maintains complete traceability of cases, evidence, and chain of custody.
+
+
 
 
 
@@ -20,6 +24,9 @@ Database Design
 
 
 
+
+
+
 Database Schema
 	•	Implemented using MySQL
 	•	Contains all CREATE TABLE statements
@@ -27,6 +34,9 @@ Database Schema
 	•	Matches the ERD exactly (no deviations)
 
 📁 SQL file: /database/narcotrackbd_schema.sql
+
+
+
 
 
 
@@ -41,11 +51,16 @@ Key Functional Coverage
 
 
 
+
+
+
 Technologies Used
 	•	Database: MySQL
 	•	Backend: PHP
 	•	Frontend: HTML, CSS
 	•	ERD Tool: dbdiagram.io
+
+
 
 
 
