@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BGB Verification | NarcoTrack BD</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">NarcoTrack BD</div>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="login-wrapper">
+    <div class="login-card">
+      <h2>BGB Officer Verification</h2>
+      <p class="subtext" id="selectedRole"></p>
+
+      <form id="bgbOfficerForm" method="POST" action="bgb-officer-details.php">
+
+        <label>Full Name</label>
+        <input type="text" name="full_name" required>
+
+        <label>BGB Force ID / Badge Number</label>
+        <input type="text" name="badge_number" required>
+
+        <label>Battalion Number</label>
+        <input type="text" name="battalion" required>
+
+        <label>Sector / Border Area</label>
+        <input type="text" name="sector" required>
+
+        <label>Official Email</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required>
+
+        <button class="btn primary full" type="submit">Next</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/bgb-officer-details.js"></script>
+</body>
+
+</html>

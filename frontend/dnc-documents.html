@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DNC Verification | NarcoTrack BD</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">NarcoTrack BD</div>
+    <nav>
+      <a href="index.php">Home</a>
+    </nav>
+  </header>
+
+  <main class="login-wrapper">
+    <div class="login-card">
+      <h2>Upload Verification Documents</h2>
+
+      <form id="dncDocsForm" method="POST" action="dnc-documents.php" enctype="multipart/form-data">
+        <label>DNC ID Card</label>
+        <input type="file" name="id_card" required>
+
+        <label>Badge / Authorization Letter</label>
+        <input type="file" name="auth_letter" required>
+
+        <button type="submit" class="btn primary full">Next</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/dnc-documents.js"></script>
+</body>
+
+</html>
